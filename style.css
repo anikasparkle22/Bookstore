@@ -1,0 +1,236 @@
+/* ========================= */
+/* GLOBAL RESET + FONT       */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f6efe5;
+  color: #111;
+}
+
+
+/* ========================= */
+/* HERO SECTION              */
+/* ========================= */
+
+.books-hero {
+  min-height: 100vh;
+  padding: 3rem 5rem;
+  background: #f6efe5;
+}
+
+
+/* ========================= */
+/* NAVBAR                    */
+/* ========================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.hamburger {
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* ========================= */
+/* HERO CONTENT LAYOUT       */
+/* ========================= */
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+
+/* ========================= */
+/* LEFT TEXT CONTENT         */
+/* ========================= */
+
+.hero-text {
+  max-width: 560px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+
+/* ========================= */
+/* BUTTON                    */
+/* ========================= */
+
+.cta-btn {
+  padding: 0.9rem 2.2rem;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+
+/* ========================= */
+/* RIGHT IMAGE GRID          */
+/* ========================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  gap: 2rem;
+}
+
+/* FRAMED BOOK COVER STYLE */
+.hero-grid img {
+  width: 100%;
+  height: 320px;              /* ✅ RECTANGLE (3:4 RATIO) */
+  object-fit: cover;         /* ✅ crops like real book covers */
+  border-radius: 24px;
+  background: #f7f3ea;       /* ✅ soft ivory like your example */
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease;
+}
+
+.hero-grid img:hover {
+  transform: translateY(-6px);
+}
+
+
+
+/* ========================= */
+/* RESPONSIVE MOBILE         */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+  .books-hero {
+    padding: 2rem;
+  }
+
+  .navbar {
+    margin-bottom: 3rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+
+.why-choose {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+
+.why-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  color: #111;
+}
+
+.why-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+}
+
+.why-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+}
+
+.why-icon {
+    width: 130px;
+    height: 130px;
+    border: 2px solid #e0d6c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.why-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.why-icon img {
+  width:70%;
+  height:70%;
+  object-fit: contain;
+  display: block;
+}
