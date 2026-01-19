@@ -18,7 +18,7 @@
 
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
+      <li><a href="#">Books</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
 
@@ -83,8 +83,211 @@
         <p>Get your hands on popular books for as little as $10</p>
     </div>
 
+<aside class="filters">
+  <!-- Sort -->
+  <div class="filter-block">
+    <label class="filter-title" for="sortBy">Sort by</label>
+    <select id="sortBy" class="filter-select">
+      <option selected>Relevance</option>
+      <option>Newest</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+      <option>Rating</option>
+    </select>
+  </div>
 
+  <!-- Genre/Category -->
+  <div class="filter-block">
+    <div class="filter-title">Genre/Category</div>
 
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Fiction</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Nonfiction</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Fantasy</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Romance</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Sci-Fi</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox" checked>
+      <span>Mystery</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox">
+      <span>Horror</span>
+    </label>
+  </div>
+
+  <!-- Author -->
+  <div class="filter-block">
+    <div class="filter-title">Author</div>
+    <input class="filter-input" type="text" placeholder="Search author">
+  </div>
+
+  <!-- Price Range -->
+  <div class="filter-block">
+    <div class="filter-title">Price Range</div>
+
+    <div class="range-labels">
+      <span>0.0</span>
+      <span>50</span>
+    </div>
+
+    <input class="filter-range" type="range" min="0" max="50" value="10" step="1">
+  </div>
+
+  <!-- Rating -->
+  <div class="filter-block">
+    <div class="filter-title">Rating</div>
+
+    <label class="check-row">
+      <input type="checkbox">
+      <span>4 stars &amp; up</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox">
+      <span>3 stars &amp; up</span>
+    </label>
+  </div>
+
+  <!-- Format -->
+  <div class="filter-block">
+    <label class="check-row">
+      <input type="checkbox">
+      <span>Hardcover</span>
+    </label>
+
+    <label class="check-row">
+      <input type="checkbox">
+      <span>Paperback</span>
+    </label>
+  </div>
+</aside>
+<section class="books-panel">
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book01.png" alt="Book cover 1">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">Mona's Eyes</h3>
+      <p class="book-author">Thomas Schlesser</p>
+      <div class="book-meta">
+        <div class="stars">★★★★<span class="star-dim">★</span></div>
+        <span class="reviews">120 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="price">$13.00</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book02.png" alt="Book cover 2">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">The Great Gatsby</h3>
+      <p class="book-author">F. Scott Fitzgerald</p>
+      <div class="book-meta">
+        <div class="stars">★★★★★</div>
+        <span class="reviews">421 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="price">$22.00</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book03.png" alt="Book cover 3">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">To Kill a Mockingbird</h3>
+      <p class="book-author">Harper Lee</p>
+      <div class="book-meta">
+        <div class="stars">★★★★<span class="star-dim">★</span></div>
+        <span class="reviews">95 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="price">$16.00</span>
+        <span class="tag">Ebook</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book04.png" alt="Book cover 4">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">Red Queen</h3>
+      <p class="book-author">Victoria Aveyard</p>
+      <div class="book-meta">
+        <div class="stars">★★★★<span class="star-dim">★</span></div>
+        <span class="reviews">95 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="pill">Pre-Oct</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book05.png" alt="Book cover 5">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">Dracula</h3>
+      <p class="book-author">Bram Stoker</p>
+      <div class="book-meta">
+        <div class="stars">★★★★★</div>
+        <span class="reviews">47 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="price">$13.00</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="book-card">
+    <div class="book-cover">
+      <img src="images/hero/book06.png" alt="Book cover 6">
+    </div>
+    <div class="book-info">
+      <h3 class="book-title">Paradox</h3>
+      <p class="book-author">Margarita Perez</p>
+      <div class="book-meta">
+        <div class="stars">★★★★<span class="star-dim">★</span></div>
+        <span class="reviews">33 revs</span>
+      </div>
+      <div class="book-bottom">
+        <span class="price">$1.80</span>
+      </div>
+    </div>
+  </article>
+
+</section>
 
 </div>
 <section>
