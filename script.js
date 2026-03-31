@@ -1,7 +1,3 @@
-/* ============================================================
-   OPEN LIBRARY API
-   Fetches 8 books per genre so genre filter has real data
-============================================================ */
 
 const GENRE_MAP = {
   fiction:    'Fiction',
@@ -48,7 +44,6 @@ async function fetchBooks() {
       (data.docs || []).forEach(doc => {
         if (!seen.has(doc.key)) {
           seen.add(doc.key);
-          // Assign a random format since Open Library rarely returns format data
           const format = FORMATS[Math.floor(Math.random() * FORMATS.length)];
           allBooks.push({
             key:    doc.key,
@@ -71,10 +66,6 @@ async function fetchBooks() {
     console.error(err);
   }
 }
-
-/* ============================================================
-   RENDER
-============================================================ */
 
 function renderBooks(books) {
   const grid    = document.getElementById('booksGrid');
@@ -139,10 +130,6 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
-/* ============================================================
-   GET FILTER STATE
-============================================================ */
-
 function getFilterState() {
   // Sort
   const sortVal = document.getElementById('sortBy').value;
@@ -167,9 +154,6 @@ function getFilterState() {
   return { sortVal, authorQuery, checkedGenres, minRating, checkedFormats };
 }
 
-/* ============================================================
-   SORT + FILTER
-============================================================ */
 
 function getSortedFiltered() {
   const { sortVal, authorQuery, checkedGenres, minRating, checkedFormats } = getFilterState();
@@ -221,9 +205,6 @@ function applyFilters() {
   renderBooks(getSortedFiltered());
 }
 
-/* ============================================================
-   EVENT LISTENERS
-============================================================ */
 
 document.getElementById('sortBy').addEventListener('change', applyFilters);
 document.getElementById('authorSearch').addEventListener('input', applyFilters);
@@ -242,9 +223,5 @@ document.querySelectorAll('input[name="rating"]').forEach(el =>
 document.querySelectorAll('input[data-format]').forEach(el =>
   el.addEventListener('change', applyFilters)
 );
-
-/* ============================================================
-   INIT
-============================================================ */
 
 fetchBooks();
